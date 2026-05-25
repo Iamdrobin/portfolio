@@ -3,350 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Dennis Kamau | Engineering Portfolio</title>
+    <title>Dennis Kamau | Telecom Engineer & Network Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Canvas particle background -->
-    <canvas id="canvas-bg"></canvas>
-    <div class="scanlines"></div>
     <div id="progress-bar"></div>
 
-    <!-- DESKTOP Navbar -->
-    <nav id="main-nav" class="desktop-nav">
+    <!-- DESKTOP NAV -->
+    <nav id="main-nav">
         <div class="nav-inner">
-            <div class="logo-mark">DK</div>
+            <a href="#home" class="nav-logo">
+                <span class="logo-box">DK</span>
+                <span class="logo-name">Dennis Kamau</span>
+            </a>
             <div class="nav-links">
-                <a href="#home"       data-num="01">Home</a>
-                <a href="#about"      data-num="02">About</a>
-                <a href="#experience" data-num="03">Experience</a>
-                <a href="#projects"   data-num="04">Projects</a>
-                <a href="#contact"    data-num="05">Contact</a>
+                <a href="#about">About</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="nav-cta">Contact Me</a>
             </div>
         </div>
     </nav>
 
-    <!-- MOBILE Top Bar -->
+    <!-- MOBILE TOP BAR -->
     <div class="mobile-topbar">
-        <div class="logo-mark">DK</div>
-        <span class="mobile-title">Dennis Kamau</span>
+        <a href="#home" class="nav-logo">
+            <span class="logo-box">DK</span>
+            <span class="logo-name">Dennis Kamau</span>
+        </a>
     </div>
 
-    <!-- MAIN CONTENT -->
     <main>
 
-        <!-- HERO -->
+        <!-- ===== HERO ===== -->
         <section id="home" class="hero">
-            <div class="hero-badge">
-                <div class="status-dot"></div>
-                Available for Internships
+            <div class="hero-left reveal">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Available for Internships & Freelance
+                </div>
+
+                <h1 class="hero-heading">
+                    Telecom<br>
+                    <span class="accent-text">Engineer.</span>
+                </h1>
+
+                <p class="hero-sub">
+                    CCNA Certified · Fibre Optics · Cat5/6 Infrastructure ·
+                    Circuit Design · Data Analytics
+                </p>
+
+                <p class="hero-desc">
+                    I build the invisible backbone of modern connectivity —
+                    from PCB schematic to enterprise network deployment.
+                    Based in Nairobi / Nyeri, Kenya.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn-secondary">View My Work</a>
+                </div>
+
+                <div class="hero-meta">
+                    <a href="tel:+254794305275" class="meta-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+254 794 305 275</span>
+                    </a>
+                    <a href="mailto:kamadennis014@gmail.com" class="meta-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>kamadennis014@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/Iamdrobin" target="_blank" class="meta-item">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Github</span>
+                    </a>
+                    <a href="https://linkedin.com/in/denniskkamau" target="_blank" class="meta-item">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="profile-ring">
-        
-                <img src="assets/images/dennis.jpg" alt="Dennis Kamau"> 
-            </div>
-
-            <h1 class="hero-name" data-text="Dennis Kamau">
-                <span>Dennis</span>
-                <span>Kamau.</span>
-            </h1>
-
-            <p class="hero-title">
-                <span class="bracket">[</span>
-                Telecom &amp; Information Engineering Student
-                <span class="bracket">]</span>
-            </p>
-
-            <p class="hero-desc">
-                Bridging the gap between physical hardware and digital systems.
-                Circuit design · Hardware prototyping · Data analytics.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#contact" class="btn-glow">Get In Touch</a>
-                <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-outline">View PDF</a>
-            </div>
-
-            <div class="hero-contacts">
-                <a href="tel:+254794305275">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+254 794 305 275</span>
-                </a>
-                <a href="mailto:kamadennis014@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>kamadennis014@gmail.com</span>
-                </a>
-                <a href="https://github.com/Iamdrobin" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                    <span>Github</span>
-                </a>
-                <a href="https://linkedin.com/in/denniskkamau" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-            </div>
-
-            <div class="scroll-hint">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
+            <div class="hero-right reveal">
+                <div class="profile-card">
+                    <div class="profile-img-wrap">
+                        <!-- Replace div below with: <img src="assets/images/profile.jpg" alt="Dennis Kamau"> -->
+                        <div class="profile-placeholder">DK</div>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Dennis Kamau</h2>
+                        <p>Telecom & Information Engineering Student</p>
+                        <p class="profile-uni">Dedan Kimathi University of Technology</p>
+                    </div>
+                    <div class="profile-badges">
+                        <div class="badge"><i class="fa-solid fa-certificate"></i> CCNA Certified</div>
+                        <div class="badge"><i class="fa-solid fa-location-dot"></i> Nairobi / Nyeri, KE</div>
+                        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> 3rd Year Student</div>
+                    </div>
+                    <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Portfolio PDF
+                    </a>
+                </div>
             </div>
         </section>
 
-        <div class="divider"></div>
-
-        <!-- ABOUT -->
+        <!-- ===== ABOUT ===== -->
         <section id="about">
-            <div class="reveal">
-                <p class="section-label">About</p>
-                <h2 class="section-title">Engineering<br>Mindset.</h2>
-                <div class="section-line"></div>
+            <div class="section-header reveal">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Background &<br>Expertise</h2>
             </div>
 
             <div class="about-grid">
-                <div class="reveal">
-                    <p class="about-text">
-                        I am an aspiring <em>Telecommunication and Information Engineer</em> currently
-                        studying at <em>Dedan Kimathi University of Technology</em>. My expertise lies at
-                        the intersection of circuit design, hardware prototyping, and data analytics.
+                <div class="about-text-col reveal">
+                    <p>
+                        I am a <strong>Telecommunication and Information Engineering student</strong>
+                        at Dedan Kimathi University of Technology with a proven track record across
+                        network engineering, hardware prototyping, and data analytics.
                     </p>
-                    <p class="about-text">
-                        Actively seeking internships to apply my academic foundation to real-world
-                        <em>infrastructure and communication challenges</em>.
+                    <p>
+                        Holding a <strong>CCNA certification</strong> from Cisco, I bring hands-on expertise
+                        in structured cabling — from fibre optic termination and splicing to Cat5/Cat6
+                        deployments in enterprise environments. I complement this with deep skills in
+                        circuit simulation, PCB design, and embedded systems.
                     </p>
-
-                    <div class="about-stats">
-                        <div class="stat-block">
-                            <div class="stat-num" data-count="3">0</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-num" data-count="2">0</div>
-                            <div class="stat-label">Experiences</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-num" data-count="7">0</div>
-                            <div class="stat-label">Core Skills</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-num">⚡</div>
-                            <div class="stat-label">Learning</div>
-                        </div>
-                    </div>
+                    <p>
+                        I am actively seeking engineering internships where I can contribute to
+                        real-world telecommunications infrastructure and communication challenges.
+                    </p>
                 </div>
 
-                <div class="reveal">
-                    <div class="skills-panel">
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">Altium Designer</span>
-                                <span class="skill-pct">88%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="88"></div></div>
+                <div class="about-stats-col reveal">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Engineering Projects</div>
                         </div>
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">Multisim / Circuit Analysis</span>
-                                <span class="skill-pct">90%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="90"></div></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="2">0</div>
+                            <div class="stat-label">Work Experiences</div>
                         </div>
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">PCB Routing &amp; Design</span>
-                                <span class="skill-pct">82%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="82"></div></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1">0</div>
+                            <div class="stat-label">Industry Certification</div>
                         </div>
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">Arduino / Embedded Logic</span>
-                                <span class="skill-pct">78%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="78"></div></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="12">0</div>
+                            <div class="stat-label">Technical Skills</div>
                         </div>
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">Data Analysis</span>
-                                <span class="skill-pct">85%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="85"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-header">
-                                <span class="skill-name">Hardware Diagnostics</span>
-                                <span class="skill-pct">80%</span>
-                            </div>
-                            <div class="skill-bar-bg"><div class="skill-bar-fill" data-w="80"></div></div>
-                        </div>
-                        <div class="tags-grid">
-                            <span class="tag">Transient Analysis</span>
-                            <span class="tag">RC/RL Circuits</span>
-                            <span class="tag">Power Electronics</span>
-                            <span class="tag">Signal Processing</span>
-                            <span class="tag">Research Methods</span>
-                            <span class="tag">Data Cleaning</span>
+                    </div>
+
+                    <div class="skills-list">
+                        <h4>Core Competencies</h4>
+                        <div class="skills-wrap">
+                            <span class="skill-chip">CCNA / Cisco IOS</span>
+                            <span class="skill-chip">Fibre Optics</span>
+                            <span class="skill-chip">Cat5 / Cat6</span>
+                            <span class="skill-chip">Altium Designer</span>
+                            <span class="skill-chip">Multisim</span>
+                            <span class="skill-chip">PCB Routing</span>
+                            <span class="skill-chip">Arduino / Embedded</span>
+                            <span class="skill-chip">Subnetting</span>
+                            <span class="skill-chip">LAN / WAN</span>
+                            <span class="skill-chip">Data Analysis</span>
+                            <span class="skill-chip">Transient Analysis</span>
+                            <span class="skill-chip">Hardware Diagnostics</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="divider"></div>
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section id="certifications">
+            <div class="section-header reveal">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Certifications &<br>Specialisations</h2>
+            </div>
 
-        <!-- EXPERIENCE -->
+            <div class="certs-grid">
+
+                <!-- CCNA -->
+                <div class="cert-card reveal">
+                    <div class="cert-top">
+                        <div class="cert-icon cisco">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <span class="cert-status active">Active</span>
+                    </div>
+                    <h3>CCNA</h3>
+                    <p class="cert-issuer">Cisco Systems</p>
+                    <p class="cert-desc">
+                        Routing & switching fundamentals, IP addressing & subnetting,
+                        LAN/WAN technologies, VLANs, OSPF, NAT/PAT, ACLs and
+                        Cisco IOS configuration & troubleshooting.
+                    </p>
+                    <div class="cert-tags">
+                        <span>Routing & Switching</span>
+                        <span>Subnetting</span>
+                        <span>VLANs</span>
+                        <span>OSPF</span>
+                        <span>Cisco IOS</span>
+                        <span>NAT / PAT</span>
+                    </div>
+                </div>
+
+                <!-- Fibre Optics -->
+                <div class="cert-card reveal">
+                    <div class="cert-top">
+                        <div class="cert-icon fibre">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                        </div>
+                        <span class="cert-status specialist">Specialist</span>
+                    </div>
+                    <h3>Fibre Optics</h3>
+                    <p class="cert-issuer">Physical Layer Infrastructure</p>
+                    <p class="cert-desc">
+                        End-to-end fibre optic installation, fusion splicing,
+                        OTDR testing, patch panel termination, fault location
+                        and documentation for enterprise and carrier networks.
+                    </p>
+                    <div class="cert-tags">
+                        <span>Fusion Splicing</span>
+                        <span>OTDR Testing</span>
+                        <span>Termination</span>
+                        <span>Patch Panels</span>
+                        <span>Fault Location</span>
+                    </div>
+                </div>
+
+                <!-- Cat5/Cat6 -->
+                <div class="cert-card reveal">
+                    <div class="cert-top">
+                        <div class="cert-icon copper">
+                            <i class="fa-solid fa-ethernet"></i>
+                        </div>
+                        <span class="cert-status specialist">Specialist</span>
+                    </div>
+                    <h3>Cat5 & Cat6 Cabling</h3>
+                    <p class="cert-issuer">Structured Cabling Infrastructure</p>
+                    <p class="cert-desc">
+                        Full structured cabling deployments — crimping, punch-down,
+                        cable management, rack installation and performance testing
+                        for Gigabit and 10-Gigabit Ethernet environments.
+                    </p>
+                    <div class="cert-tags">
+                        <span>Crimping</span>
+                        <span>Punch-Down</span>
+                        <span>Rack Install</span>
+                        <span>Cable Management</span>
+                        <span>Gigabit LAN</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
         <section id="experience">
-            <div class="reveal">
-                <p class="section-label">Experience</p>
-                <h2 class="section-title">Where I've<br>Worked.</h2>
-                <div class="section-line"></div>
+            <div class="section-header reveal">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Where I've<br>Worked</h2>
             </div>
 
             <div class="timeline">
-                <div class="tl-item active reveal">
-                    <div class="tl-dot"></div>
-                    <div class="tl-body">
-                        <div class="tl-badge">Open to Opportunities</div>
-                        <div class="tl-top">
-                            <div class="tl-role">Engineering Internship</div>
-                            <span class="tl-date">2025 / Now</span>
+
+                <div class="tl-item current reveal">
+                    <div class="tl-marker">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-head">
+                            <div>
+                                <h3 class="tl-role">Engineering Internship</h3>
+                                <p class="tl-company">Telecom & Hardware Industry</p>
+                            </div>
+                            <span class="tl-date current-date">Open · 2025</span>
                         </div>
-                        <div class="tl-company">Telecommunications &amp; Hardware Industry</div>
-                        <p class="tl-desc">Actively seeking roles in physical infrastructure, circuit simulation, and system diagnostics.</p>
+                        <p class="tl-desc">
+                            Actively seeking roles in network infrastructure deployment,
+                            circuit simulation, fibre optic installation and system diagnostics.
+                            Ready to contribute immediately.
+                        </p>
+                        <div class="tl-tag-row">
+                            <span>Fibre Optics</span>
+                            <span>Cisco</span>
+                            <span>Circuit Design</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="tl-item reveal">
-                    <div class="tl-dot"></div>
-                    <div class="tl-body">
-                        <div class="tl-top">
-                            <div class="tl-role">Research Assistant</div>
+                    <div class="tl-marker">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-head">
+                            <div>
+                                <h3 class="tl-role">Research Assistant</h3>
+                                <p class="tl-company">Datapath Research Consultancy</p>
+                            </div>
                             <span class="tl-date">2024</span>
                         </div>
-                        <div class="tl-company">Datapath Research Consultancy</div>
-                        <p class="tl-desc">Conducted data analysis, gathered research metrics, and assisted in structuring technical consultancy reports for enterprise clients.</p>
+                        <p class="tl-desc">
+                            Conducted data analysis and gathered research metrics,
+                            assisting in the structuring of technical consultancy
+                            reports for enterprise clients.
+                        </p>
+                        <div class="tl-tag-row">
+                            <span>Data Analysis</span>
+                            <span>Research</span>
+                            <span>Reporting</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="tl-item reveal">
-                    <div class="tl-dot"></div>
-                    <div class="tl-body">
-                        <div class="tl-top">
-                            <div class="tl-role">Data Cleaning Specialist</div>
+                    <div class="tl-marker">
+                        <div class="tl-dot"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-head">
+                            <div>
+                                <h3 class="tl-role">Data Cleaning Specialist</h3>
+                                <p class="tl-company">USIU-Africa · CO-CARE Program</p>
+                            </div>
                             <span class="tl-date">Sep – Oct 2024</span>
                         </div>
-                        <div class="tl-company">USIU-Africa · CO-CARE Program</div>
-                        <p class="tl-desc">Executed comprehensive data cleaning, formatting, and validation protocols to ensure accuracy for the CO-CARE research initiative.</p>
+                        <p class="tl-desc">
+                            Executed comprehensive data cleaning, formatting and validation
+                            protocols to ensure accuracy for the CO-CARE research initiative.
+                        </p>
+                        <div class="tl-tag-row">
+                            <span>Data Validation</span>
+                            <span>Excel</span>
+                            <span>Research Support</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <div class="divider"></div>
-
-        <!-- PROJECTS -->
+        <!-- ===== PROJECTS ===== -->
         <section id="projects">
-            <div class="reveal">
-                <p class="section-label">Projects</p>
-                <h2 class="section-title">Applied<br>Engineering.</h2>
-                <div class="section-line"></div>
+            <div class="section-header reveal">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Applied<br>Engineering</h2>
             </div>
 
             <div class="projects-grid">
+
                 <div class="proj-card reveal">
-                    <div class="proj-icon"><i class="fa-solid fa-microchip"></i></div>
-                    <div class="proj-num">// 01</div>
-                    <div class="proj-title">Circuit Analysis &amp; PCB Design</div>
-                    <p class="proj-desc">Advanced schematic capture in Altium Designer. Transient analysis on RC and RL circuits using Multisim to verify voltage stability.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Altium</span>
-                        <span class="proj-tag">Multisim</span>
-                        <span class="proj-tag">PCB</span>
+                    <div class="proj-header">
+                        <div class="proj-num">01</div>
+                        <div class="proj-icon"><i class="fa-solid fa-microchip"></i></div>
+                    </div>
+                    <h3>Circuit Analysis & PCB Design</h3>
+                    <p>Advanced schematic capture in Altium Designer. Transient analysis on RC and RL circuits using Multisim to verify voltage stability under load conditions.</p>
+                    <div class="proj-footer">
+                        <div class="proj-chips">
+                            <span>Altium Designer</span>
+                            <span>Multisim</span>
+                            <span>PCB</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="proj-card reveal">
-                    <div class="proj-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="proj-num">// 02</div>
-                    <div class="proj-title">Power Supply Prototype</div>
-                    <p class="proj-desc">Constructed a physical PSU with precision transformer routing (dual blue / single black) for accurate voltage stepping and stable DC output.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Power Electronics</span>
-                        <span class="proj-tag">Transformer</span>
-                        <span class="proj-tag">Hardware</span>
+                    <div class="proj-header">
+                        <div class="proj-num">02</div>
+                        <div class="proj-icon"><i class="fa-solid fa-bolt"></i></div>
+                    </div>
+                    <h3>Power Supply Prototype</h3>
+                    <p>Constructed a physical power supply unit with precision transformer routing (dual blue / single black) to ensure accurate voltage stepping and stable DC output regulation.</p>
+                    <div class="proj-footer">
+                        <div class="proj-chips">
+                            <span>Power Electronics</span>
+                            <span>Transformer</span>
+                            <span>Hardware</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="proj-card reveal">
-                    <div class="proj-icon"><i class="fa-solid fa-wrench"></i></div>
-                    <div class="proj-num">// 03</div>
-                    <div class="proj-title">Hardware Diagnostics &amp; Repair</div>
-                    <p class="proj-desc">Component-level diagnostics and repair of an audio amplifier output stage. Restored full hardware functionality.</p>
-                    <div class="proj-tags">
-                        <span class="proj-tag">Diagnostics</span>
-                        <span class="proj-tag">Amplifier</span>
-                        <span class="proj-tag">Repair</span>
+                    <div class="proj-header">
+                        <div class="proj-num">03</div>
+                        <div class="proj-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    </div>
+                    <h3>Network Infrastructure Deployment</h3>
+                    <p>Full structured cabling project — Cat6 runs, patch panel termination, rack installation, and Cisco switch configuration for a small enterprise network.</p>
+                    <div class="proj-footer">
+                        <div class="proj-chips">
+                            <span>Cat6</span>
+                            <span>Cisco</span>
+                            <span>Patch Panel</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="proj-card reveal">
+                    <div class="proj-header">
+                        <div class="proj-num">04</div>
+                        <div class="proj-icon"><i class="fa-solid fa-wrench"></i></div>
+                    </div>
+                    <h3>Hardware Diagnostics & Repair</h3>
+                    <p>Component-level diagnostics and repair of an audio amplifier output stage. Identified failing components, executed targeted repair and restored full hardware functionality.</p>
+                    <div class="proj-footer">
+                        <div class="proj-chips">
+                            <span>Diagnostics</span>
+                            <span>Amplifier Repair</span>
+                            <span>Component-Level</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="doc-banner reveal">
-                <div class="doc-left">
-                    <div class="doc-icon-wrap"><i class="fa-solid fa-file-pdf"></i></div>
-                    <div class="doc-info">
-                        <h4>Technical Documentation</h4>
-                        <p>Full breakdown of engineering projects &amp; reports.</p>
+            <div class="pdf-row reveal">
+                <div class="pdf-left">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <div>
+                        <h4>Full Technical Documentation</h4>
+                        <p>Detailed engineering project breakdowns and attachment reports.</p>
                     </div>
                 </div>
-                <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-pdf">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View PDF
+                <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-primary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open PDF
                 </a>
             </div>
         </section>
 
-        <div class="divider"></div>
-
-        <!-- CONTACT -->
+        <!-- ===== CONTACT ===== -->
         <section id="contact">
-            <div class="reveal">
-                <p class="section-label">Contact</p>
-                <h2 class="section-title">Let's<br>Connect.</h2>
-                <div class="section-line"></div>
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Work<br>Together</h2>
             </div>
 
-            <div class="contact-wrap">
-                <div class="contact-info reveal">
-                    <p class="contact-sub">Open to internships, consultancy and collaborations.</p>
-                    <div class="contact-links">
-                        <a href="tel:+254794305275" class="contact-link">
-                            <i class="fa-solid fa-phone"></i>
-                            <div class="contact-link-text">
+            <div class="contact-grid">
+                <div class="contact-left reveal">
+                    <p class="contact-intro">
+                        Open to engineering internships, network infrastructure projects,
+                        data consultancy and academic collaborations. Reach out — I respond within 24 hours.
+                    </p>
+
+                    <div class="contact-items">
+                        <a href="tel:+254794305275" class="contact-item">
+                            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="ci-text">
                                 <span>Phone</span>
                                 <strong>+254 794 305 275</strong>
                             </div>
                         </a>
-                        <a href="mailto:kamadennis014@gmail.com" class="contact-link">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div class="contact-link-text">
+                        <a href="mailto:kamadennis014@gmail.com" class="contact-item">
+                            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="ci-text">
                                 <span>Email</span>
                                 <strong>kamadennis014@gmail.com</strong>
                             </div>
                         </a>
-                        <a href="https://linkedin.com/in/denniskkamau" target="_blank" class="contact-link">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <div class="contact-link-text">
+                        <a href="https://linkedin.com/in/denniskkamau" target="_blank" class="contact-item">
+                            <div class="ci-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="ci-text">
                                 <span>LinkedIn</span>
-                                <strong>denniskkamau</strong>
+                                <strong>Dennis Kamau</strong>
                             </div>
                         </a>
-                        <a href="https://github.com/Iamdrobin" target="_blank" class="contact-link">
-                            <i class="fa-brands fa-github"></i>
-                            <div class="contact-link-text">
+                        <a href="https://github.com/Iamdrobin" target="_blank" class="contact-item">
+                            <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="ci-text">
                                 <span>GitHub</span>
                                 <strong>Iamdrobin</strong>
                             </div>
@@ -354,29 +488,31 @@
                     </div>
                 </div>
 
-                <div class="contact-form-panel reveal">
+                <div class="contact-right reveal">
                     <form id="contact-form" action="https://formspree.io/f/xnjrjppy" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Name</label>
+                                <label>Full Name</label>
                                 <input type="text" name="name" placeholder="John Doe" required>
                             </div>
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" name="email" placeholder="you@email.com" required>
+                                <label>Email Address</label>
+                                <input type="email" name="email" placeholder="you@company.com" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Subject</label>
-                            <input type="text" name="subject" placeholder="Internship Opportunity">
+                            <input type="text" name="subject" placeholder="e.g. Internship Opportunity / Network Project">
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+                            <textarea name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn" id="submit-btn">Send Transmission</button>
+                        <button type="submit" class="btn-submit" id="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
                         <div class="form-success" id="form-success">
-                            ✓ &nbsp; TRANSMISSION SENT SUCCESSFULLY
+                            <i class="fa-solid fa-circle-check"></i> Message sent — I'll be in touch soon!
                         </div>
                     </form>
                 </div>
@@ -385,35 +521,27 @@
 
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-left">
-            © 2026 <span>Dennis Kamau</span> · All systems nominal.
-        </div>
-        <div class="footer-socials">
-            <a href="https://github.com/Iamdrobin" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/denniskkamau" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:kamadennis014@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-box sm">DK</span>
+                <span>© 2026 Dennis Kamau. All rights reserved.</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Iamdrobin" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/denniskkamau" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:kamadennis014@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 
     <!-- MOBILE BOTTOM NAV -->
-    <nav class="mobile-bottom-nav" id="mobile-bottom-nav">
-        <a href="#home"       class="mob-item" data-section="home">
-            <i class="fa-solid fa-house"></i><span>Home</span>
-        </a>
-        <a href="#about"      class="mob-item" data-section="about">
-            <i class="fa-solid fa-user"></i><span>About</span>
-        </a>
-        <a href="#experience" class="mob-item" data-section="experience">
-            <i class="fa-solid fa-briefcase"></i><span>Exp</span>
-        </a>
-        <a href="#projects"   class="mob-item" data-section="projects">
-            <i class="fa-solid fa-folder"></i><span>Work</span>
-        </a>
-        <a href="#contact"    class="mob-item" data-section="contact">
-            <i class="fa-solid fa-envelope"></i><span>Contact</span>
-        </a>
+    <nav class="mob-nav" id="mob-nav">
+        <a href="#home"           class="mob-link" data-section="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="#about"          class="mob-link" data-section="about"><i class="fa-solid fa-user"></i><span>About</span></a>
+        <a href="#certifications" class="mob-link" data-section="certifications"><i class="fa-solid fa-certificate"></i><span>Certs</span></a>
+        <a href="#projects"       class="mob-link" data-section="projects"><i class="fa-solid fa-folder"></i><span>Work</span></a>
+        <a href="#contact"        class="mob-link" data-section="contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
     </nav>
 
     <script src="script.js"></script>
