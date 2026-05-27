@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Dennis Kamau | Telecom Engineer & Network Specialist</title>
+    <title>Dennis Kamau | Telecom Engineer & CCNA Network Specialist</title>
+    <meta name="description" content="Dennis Kamau — CCNA Certified Telecommunications & Information Engineering student at Dedan Kimathi University. Expert in Fibre Optics, Cat5/6, PCB Design and Data Analytics. Nairobi, Kenya.">
+    <meta name="keywords" content="Dennis Kamau, Telecom Engineer, CCNA, Fibre Optics, Cat5, Cat6, Network Infrastructure, PCB Design, Altium, Nairobi, Kenya, DeKUT">
+    <meta name="author" content="Dennis Kamau">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Dennis Kamau | Telecom Engineer & CCNA Specialist">
+    <meta property="og:description" content="CCNA Certified Telecom Engineer — Fibre Optics, Cat5/6, Circuit Design, Data Analytics. Nairobi, Kenya.">
+    <meta property="og:image" content="https://denniskamau.me/assets/images/dennis.jpg">
+    <meta property="og:url" content="https://denniskamau.me">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dennis Kamau Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dennis Kamau | Telecom Engineer & CCNA Specialist">
+    <meta name="twitter:description" content="CCNA Certified Telecom Engineer — Fibre Optics, Cat5/6, PCB Design. Nairobi, Kenya.">
+    <meta name="twitter:image" content="https://denniskamau.me/assets/images/dennis.jpg">
+    <link rel="canonical" href="https://denniskamau.me">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -12,9 +27,31 @@
 </head>
 <body>
 
-    <div id="progress-bar"></div>
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="pre-logo">DK</div>
+            <div class="pre-bar-wrap"><div class="pre-bar"></div></div>
+            <p class="pre-text">Loading Portfolio...</p>
+        </div>
+    </div>
 
-    <!-- DESKTOP NAV -->
+    <!-- ===== PDF VIEWER MODAL (view only — no download) ===== -->
+    <div id="pdf-modal" class="pdf-modal">
+        <div class="pdf-modal-inner">
+            <div class="pdf-modal-header">
+                <span><i class="fa-solid fa-file-pdf"></i> Engineering Portfolio — Dennis Kamau</span>
+                <button class="pdf-close" id="pdf-close" aria-label="Close viewer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="pdf-frame-wrap">
+                <iframe id="pdf-frame" src="" title="Dennis Kamau Engineering Portfolio" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== DESKTOP NAV ===== -->
     <nav id="main-nav">
         <div class="nav-inner">
             <a href="#home" class="nav-logo">
@@ -23,6 +60,7 @@
             </a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#tech">Tech</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
@@ -31,7 +69,7 @@
         </div>
     </nav>
 
-    <!-- MOBILE TOP BAR -->
+    <!-- ===== MOBILE TOP BAR ===== -->
     <div class="mobile-topbar">
         <a href="#home" class="nav-logo">
             <span class="logo-box">DK</span>
@@ -41,51 +79,44 @@
 
     <main>
 
-        <!-- ===== HERO ===== -->
+        <!-- ===========================
+             HERO
+        =========================== -->
         <section id="home" class="hero">
             <div class="hero-left reveal">
                 <div class="hero-tag">
                     <span class="dot"></span>
-                    Available for Internships & Freelance
+                    Available for Internships &amp; Freelance
                 </div>
-
                 <h1 class="hero-heading">
                     Telecom<br>
                     <span class="accent-text">Engineer.</span>
                 </h1>
-
                 <p class="hero-sub">
-                    CCNA Certified · Fibre Optics · Cat5/6 Infrastructure ·
-                    Circuit Design · Data Analytics
+                    CCNA Certified &nbsp;·&nbsp; Fibre Optics &nbsp;·&nbsp; Cat5/6 Infrastructure
+                    &nbsp;·&nbsp; Circuit Design &nbsp;·&nbsp; Data Analytics
                 </p>
-
                 <p class="hero-desc">
                     I build the invisible backbone of modern connectivity —
                     from PCB schematic to enterprise network deployment.
                     Based in Nairobi / Nyeri, Kenya.
                 </p>
-
                 <div class="hero-actions">
                     <a href="#contact" class="btn-primary">Get In Touch</a>
                     <a href="#projects" class="btn-secondary">View My Work</a>
                 </div>
-
                 <div class="hero-meta">
                     <a href="tel:+254794305275" class="meta-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+254 794 305 275</span>
+                        <i class="fa-solid fa-phone"></i><span>+254 794 305 275</span>
                     </a>
                     <a href="mailto:kamadennis014@gmail.com" class="meta-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>kamadennis014@gmail.com</span>
+                        <i class="fa-solid fa-envelope"></i><span>kamadennis014@gmail.com</span>
                     </a>
                     <a href="https://github.com/Iamdrobin" target="_blank" class="meta-item">
-                        <i class="fa-brands fa-github"></i>
-                        <span>Github</span>
+                        <i class="fa-brands fa-github"></i><span>Github</span>
                     </a>
                     <a href="https://linkedin.com/in/denniskkamau" target="_blank" class="meta-item">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <span>LinkedIn</span>
+                        <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -97,28 +128,29 @@
                     </div>
                     <div class="profile-info">
                         <h2>Dennis Kamau</h2>
-                        <p>Telecom & Information Engineering Student</p>
+                        <p>Telecom &amp; Information Engineering Student</p>
                         <p class="profile-uni">Dedan Kimathi University of Technology</p>
                     </div>
                     <div class="profile-badges">
-                        <div class="badge"><i class="fa-solid fa-certificate"></i> CCNA Certified</div>
-                        <div class="badge"><i class="fa-solid fa-location-dot"></i> Nairobi / Nyeri, KE</div>
-                        <div class="badge"><i class="fa-solid fa-graduation-cap"></i> 3rd Year Student</div>
+                        <div class="badge"><i class="fa-solid fa-certificate"></i>CCNA Certified</div>
+                        <div class="badge"><i class="fa-solid fa-location-dot"></i>Nairobi / Nyeri, KE</div>
+                        <div class="badge"><i class="fa-solid fa-graduation-cap"></i>Engineering Student</div>
                     </div>
-                    <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-download">
-                        <i class="fa-solid fa-file-arrow-down"></i> Download Portfolio PDF
-                    </a>
+                    <button class="btn-download" id="open-pdf-btn">
+                        <i class="fa-solid fa-eye"></i> View Portfolio PDF
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- ===== ABOUT ===== -->
+        <!-- ===========================
+             ABOUT
+        =========================== -->
         <section id="about">
             <div class="section-header reveal">
                 <span class="section-tag">About Me</span>
-                <h2 class="section-title">Background &<br>Expertise</h2>
+                <h2 class="section-title">Background &amp;<br>Expertise</h2>
             </div>
-
             <div class="about-grid">
                 <div class="about-text-col reveal">
                     <p>
@@ -137,11 +169,10 @@
                         real-world telecommunications infrastructure and communication challenges.
                     </p>
                 </div>
-
-                <div class="about-stats-col reveal">
+                <div class="about-right-col reveal">
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-number" data-count="4">0</div>
                             <div class="stat-label">Engineering Projects</div>
                         </div>
                         <div class="stat-item">
@@ -150,61 +181,167 @@
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" data-count="1">0</div>
-                            <div class="stat-label">Industry Certification</div>
+                            <div class="stat-label">Certification</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number" data-count="12">0</div>
                             <div class="stat-label">Technical Skills</div>
                         </div>
                     </div>
-
-                    <div class="skills-list">
+                    <div class="skills-block">
                         <h4>Core Competencies</h4>
                         <div class="skills-wrap">
-                            <span class="skill-chip">CCNA / Cisco IOS</span>
-                            <span class="skill-chip">Fibre Optics</span>
-                            <span class="skill-chip">Cat5 / Cat6</span>
-                            <span class="skill-chip">Altium Designer</span>
-                            <span class="skill-chip">Multisim</span>
-                            <span class="skill-chip">PCB Routing</span>
-                            <span class="skill-chip">Arduino / Embedded</span>
-                            <span class="skill-chip">Subnetting</span>
-                            <span class="skill-chip">LAN / WAN</span>
-                            <span class="skill-chip">Data Analysis</span>
-                            <span class="skill-chip">Transient Analysis</span>
-                            <span class="skill-chip">Hardware Diagnostics</span>
+                            <span>CCNA / Cisco IOS</span>
+                            <span>Fibre Optics</span>
+                            <span>Cat5 / Cat6</span>
+                            <span>Altium Designer</span>
+                            <span>Multisim</span>
+                            <span>PCB Routing</span>
+                            <span>Arduino / Embedded</span>
+                            <span>Subnetting</span>
+                            <span>LAN / WAN</span>
+                            <span>Data Analysis</span>
+                            <span>Transient Analysis</span>
+                            <span>Hardware Diagnostics</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CERTIFICATIONS ===== -->
+        <!-- ===========================
+             TECH I WORK WITH (image showcase)
+        =========================== -->
+        <section id="tech">
+            <div class="section-header reveal">
+                <span class="section-tag">Tools &amp; Technology</span>
+                <h2 class="section-title">The Hardware &amp;<br>Infrastructure I Use</h2>
+            </div>
+            <div class="tech-grid">
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                            alt="PCB Circuit Board Design"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>PCB &amp; Circuit Design</h3>
+                        <p>Schematic capture, PCB routing and transient analysis using Altium Designer and Multisim.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=700&q=80"
+                            alt="Arduino Embedded Systems"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>Arduino &amp; Embedded Systems</h3>
+                        <p>Microcontroller programming, sensor integration and embedded logic for hardware prototypes.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80"
+                            alt="Network Routers and Switches"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>Routers &amp; Switches</h3>
+                        <p>Cisco IOS configuration, VLAN setup, routing protocols (OSPF, RIP) and network troubleshooting.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80"
+                            alt="Server Rack and Data Centre Infrastructure"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>Server &amp; Rack Infrastructure</h3>
+                        <p>Rack installation, patch panel termination, cable management and data centre cabling deployments.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80"
+                            alt="Fibre Optic Cables"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>Fibre Optic Cabling</h3>
+                        <p>Fusion splicing, OTDR testing, fault location and end-to-end fibre infrastructure deployment.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card reveal">
+                    <div class="tech-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80"
+                            alt="Satellite Dish and Antenna Telecom"
+                            loading="lazy">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                        </div>
+                    </div>
+                    <div class="tech-card-body">
+                        <h3>Antennas &amp; Telecom Systems</h3>
+                        <p>Telecommunications signal theory, wireless propagation and satellite communication systems.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===========================
+             CERTIFICATIONS
+        =========================== -->
         <section id="certifications">
             <div class="section-header reveal">
                 <span class="section-tag">Credentials</span>
-                <h2 class="section-title">Certifications &<br>Specialisations</h2>
+                <h2 class="section-title">Certifications &amp;<br>Specialisations</h2>
             </div>
-
             <div class="certs-grid">
 
-                <!-- CCNA -->
                 <div class="cert-card reveal">
                     <div class="cert-top">
-                        <div class="cert-icon cisco">
-                            <i class="fa-solid fa-network-wired"></i>
-                        </div>
+                        <div class="cert-icon cisco"><i class="fa-solid fa-network-wired"></i></div>
                         <span class="cert-status active">Active</span>
                     </div>
                     <h3>CCNA</h3>
                     <p class="cert-issuer">Cisco Systems</p>
                     <p class="cert-desc">
-                        Routing & switching fundamentals, IP addressing & subnetting,
+                        Routing &amp; switching fundamentals, IP addressing &amp; subnetting,
                         LAN/WAN technologies, VLANs, OSPF, NAT/PAT, ACLs and
-                        Cisco IOS configuration & troubleshooting.
+                        Cisco IOS configuration &amp; troubleshooting.
                     </p>
                     <div class="cert-tags">
-                        <span>Routing & Switching</span>
+                        <span>Routing &amp; Switching</span>
                         <span>Subnetting</span>
                         <span>VLANs</span>
                         <span>OSPF</span>
@@ -213,20 +350,17 @@
                     </div>
                 </div>
 
-                <!-- Fibre Optics -->
                 <div class="cert-card reveal">
                     <div class="cert-top">
-                        <div class="cert-icon fibre">
-                            <i class="fa-solid fa-circle-nodes"></i>
-                        </div>
+                        <div class="cert-icon fibre"><i class="fa-solid fa-circle-nodes"></i></div>
                         <span class="cert-status specialist">Specialist</span>
                     </div>
                     <h3>Fibre Optics</h3>
                     <p class="cert-issuer">Physical Layer Infrastructure</p>
                     <p class="cert-desc">
                         End-to-end fibre optic installation, fusion splicing,
-                        OTDR testing, patch panel termination, fault location
-                        and documentation for enterprise and carrier networks.
+                        OTDR testing, patch panel termination and fault location
+                        in enterprise and carrier-grade networks.
                     </p>
                     <div class="cert-tags">
                         <span>Fusion Splicing</span>
@@ -237,15 +371,12 @@
                     </div>
                 </div>
 
-                <!-- Cat5/Cat6 -->
                 <div class="cert-card reveal">
                     <div class="cert-top">
-                        <div class="cert-icon copper">
-                            <i class="fa-solid fa-ethernet"></i>
-                        </div>
+                        <div class="cert-icon copper"><i class="fa-solid fa-ethernet"></i></div>
                         <span class="cert-status specialist">Specialist</span>
                     </div>
-                    <h3>Cat5 & Cat6 Cabling</h3>
+                    <h3>Cat5 &amp; Cat6 Cabling</h3>
                     <p class="cert-issuer">Structured Cabling Infrastructure</p>
                     <p class="cert-desc">
                         Full structured cabling deployments — crimping, punch-down,
@@ -264,13 +395,14 @@
             </div>
         </section>
 
-        <!-- ===== EXPERIENCE ===== -->
+        <!-- ===========================
+             EXPERIENCE
+        =========================== -->
         <section id="experience">
             <div class="section-header reveal">
                 <span class="section-tag">Experience</span>
                 <h2 class="section-title">Where I've<br>Worked</h2>
             </div>
-
             <div class="timeline">
 
                 <div class="tl-item current reveal">
@@ -282,7 +414,7 @@
                         <div class="tl-head">
                             <div>
                                 <h3 class="tl-role">Engineering Internship</h3>
-                                <p class="tl-company">Telecom & Hardware Industry</p>
+                                <p class="tl-company">Telecom &amp; Hardware Industry</p>
                             </div>
                             <span class="tl-date current-date">Open · 2025</span>
                         </div>
@@ -352,23 +484,30 @@
             </div>
         </section>
 
-        <!-- ===== PROJECTS ===== -->
+        <!-- ===========================
+             PROJECTS
+        =========================== -->
         <section id="projects">
             <div class="section-header reveal">
                 <span class="section-tag">Projects</span>
                 <h2 class="section-title">Applied<br>Engineering</h2>
             </div>
-
             <div class="projects-grid">
 
                 <div class="proj-card reveal">
-                    <div class="proj-header">
-                        <div class="proj-num">01</div>
-                        <div class="proj-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="proj-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                            alt="Circuit Analysis and PCB Design"
+                            loading="lazy">
                     </div>
-                    <h3>Circuit Analysis & PCB Design</h3>
-                    <p>Advanced schematic capture in Altium Designer. Transient analysis on RC and RL circuits using Multisim to verify voltage stability under load conditions.</p>
-                    <div class="proj-footer">
+                    <div class="proj-body">
+                        <div class="proj-header">
+                            <div class="proj-num">01</div>
+                            <div class="proj-icon"><i class="fa-solid fa-microchip"></i></div>
+                        </div>
+                        <h3>Circuit Analysis &amp; PCB Design</h3>
+                        <p>Advanced schematic capture in Altium Designer. Transient analysis on RC and RL circuits using Multisim to verify voltage stability under load conditions.</p>
                         <div class="proj-chips">
                             <span>Altium Designer</span>
                             <span>Multisim</span>
@@ -378,13 +517,19 @@
                 </div>
 
                 <div class="proj-card reveal">
-                    <div class="proj-header">
-                        <div class="proj-num">02</div>
-                        <div class="proj-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="proj-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80"
+                            alt="Power Supply Prototype Hardware"
+                            loading="lazy">
                     </div>
-                    <h3>Power Supply Prototype</h3>
-                    <p>Constructed a physical power supply unit with precision transformer routing (dual blue / single black) to ensure accurate voltage stepping and stable DC output regulation.</p>
-                    <div class="proj-footer">
+                    <div class="proj-body">
+                        <div class="proj-header">
+                            <div class="proj-num">02</div>
+                            <div class="proj-icon"><i class="fa-solid fa-bolt"></i></div>
+                        </div>
+                        <h3>Power Supply Prototype</h3>
+                        <p>Constructed a physical PSU with precision transformer routing (dual blue / single black) for accurate voltage stepping and stable DC output regulation.</p>
                         <div class="proj-chips">
                             <span>Power Electronics</span>
                             <span>Transformer</span>
@@ -394,13 +539,19 @@
                 </div>
 
                 <div class="proj-card reveal">
-                    <div class="proj-header">
-                        <div class="proj-num">03</div>
-                        <div class="proj-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="proj-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80"
+                            alt="Network Infrastructure Cat6 Deployment"
+                            loading="lazy">
                     </div>
-                    <h3>Network Infrastructure Deployment</h3>
-                    <p>Full structured cabling project — Cat6 runs, patch panel termination, rack installation, and Cisco switch configuration for a small enterprise network.</p>
-                    <div class="proj-footer">
+                    <div class="proj-body">
+                        <div class="proj-header">
+                            <div class="proj-num">03</div>
+                            <div class="proj-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        </div>
+                        <h3>Network Infrastructure Deployment</h3>
+                        <p>Full structured cabling project — Cat6 runs, patch panel termination, rack installation and Cisco switch configuration for a small enterprise network.</p>
                         <div class="proj-chips">
                             <span>Cat6</span>
                             <span>Cisco</span>
@@ -410,13 +561,19 @@
                 </div>
 
                 <div class="proj-card reveal">
-                    <div class="proj-header">
-                        <div class="proj-num">04</div>
-                        <div class="proj-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <div class="proj-img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=700&q=80"
+                            alt="Hardware Diagnostics and Repair Electronics"
+                            loading="lazy">
                     </div>
-                    <h3>Hardware Diagnostics & Repair</h3>
-                    <p>Component-level diagnostics and repair of an audio amplifier output stage. Identified failing components, executed targeted repair and restored full hardware functionality.</p>
-                    <div class="proj-footer">
+                    <div class="proj-body">
+                        <div class="proj-header">
+                            <div class="proj-num">04</div>
+                            <div class="proj-icon"><i class="fa-solid fa-wrench"></i></div>
+                        </div>
+                        <h3>Hardware Diagnostics &amp; Repair</h3>
+                        <p>Component-level diagnostics and repair of an audio amplifier output stage. Identified failing components and restored full hardware functionality.</p>
                         <div class="proj-chips">
                             <span>Diagnostics</span>
                             <span>Amplifier Repair</span>
@@ -427,62 +584,53 @@
 
             </div>
 
+            <!-- PDF row — view only -->
             <div class="pdf-row reveal">
                 <div class="pdf-left">
                     <i class="fa-solid fa-file-pdf"></i>
                     <div>
                         <h4>Full Technical Documentation</h4>
-                        <p>Detailed engineering project breakdowns and attachment reports.</p>
+                        <p>View detailed engineering project breakdowns and attachment reports.</p>
                     </div>
                 </div>
-                <a href="assets/Engineering_Portfolio.pdf" target="_blank" class="btn-primary">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open PDF
-                </a>
+                <button class="btn-primary open-pdf" id="open-pdf-btn-2">
+                    <i class="fa-solid fa-eye"></i> View Portfolio
+                </button>
             </div>
         </section>
 
-        <!-- ===== CONTACT ===== -->
+        <!-- ===========================
+             CONTACT
+        =========================== -->
         <section id="contact">
             <div class="section-header reveal">
                 <span class="section-tag">Contact</span>
                 <h2 class="section-title">Let's Work<br>Together</h2>
             </div>
-
             <div class="contact-grid">
+
                 <div class="contact-left reveal">
                     <p class="contact-intro">
                         Open to engineering internships, network infrastructure projects,
-                        data consultancy and academic collaborations. Reach out — I respond within 24 hours.
+                        data consultancy and academic collaborations.
+                        Reach out — I respond within 24 hours.
                     </p>
-
                     <div class="contact-items">
                         <a href="tel:+254794305275" class="contact-item">
                             <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="ci-text">
-                                <span>Phone</span>
-                                <strong>+254 794 305 275</strong>
-                            </div>
+                            <div class="ci-text"><span>Phone</span><strong>+254 794 305 275</strong></div>
                         </a>
                         <a href="mailto:kamadennis014@gmail.com" class="contact-item">
                             <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="ci-text">
-                                <span>Email</span>
-                                <strong>kamadennis014@gmail.com</strong>
-                            </div>
+                            <div class="ci-text"><span>Email</span><strong>kamadennis014@gmail.com</strong></div>
                         </a>
                         <a href="https://linkedin.com/in/denniskkamau" target="_blank" class="contact-item">
                             <div class="ci-icon"><i class="fa-brands fa-linkedin"></i></div>
-                            <div class="ci-text">
-                                <span>LinkedIn</span>
-                                <strong>Dennis Kamau</strong>
-                            </div>
+                            <div class="ci-text"><span>LinkedIn</span><strong>Dennis Kamau</strong></div>
                         </a>
                         <a href="https://github.com/Iamdrobin" target="_blank" class="contact-item">
                             <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
-                            <div class="ci-text">
-                                <span>GitHub</span>
-                                <strong>Iamdrobin</strong>
-                            </div>
+                            <div class="ci-text"><span>GitHub</span><strong>Iamdrobin</strong></div>
                         </a>
                     </div>
                 </div>
@@ -505,7 +653,7 @@
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+                            <textarea name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
                         </div>
                         <button type="submit" class="btn-submit" id="submit-btn">
                             <i class="fa-solid fa-paper-plane"></i> Send Message
@@ -515,11 +663,13 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </section>
 
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
@@ -533,7 +683,8 @@
             </div>
         </div>
     </footer>
-    <!-- MOBILE BOTTOM NAV -->
+
+    <!-- ===== MOBILE BOTTOM NAV ===== -->
     <nav class="mob-nav" id="mob-nav">
         <a href="#home"           class="mob-link" data-section="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
         <a href="#about"          class="mob-link" data-section="about"><i class="fa-solid fa-user"></i><span>About</span></a>
