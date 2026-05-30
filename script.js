@@ -1,40 +1,85 @@
 /* ============================================================
-   DENNIS KAMAU — script.js  (Complete v4)
-   Preloader · PDF Modal · Reveal · Counters
-   Mobile Nav · Smooth Scroll · Contact Form
+   DENNIS KAMAU — script.js (v5)
+   Intro · PDF Modal · Reveal · Counters · Nav · Form
 ============================================================ */
 
 /* ============================================================
-   1. PRELOADER — hides after page fully loads
+   1. CINEMATIC INTRO — 10 seconds, field-themed
 ============================================================ */
-const preloader = document.getElementById('preloader');
+const introScreen = document.getElementById('intro-screen');
+const enterBtn    = document.getElementById('intro-enter');
+const countEl     = document.getElementById('intro-count');
 
-window.addEventListener('load', () => {
-    // Give the bar animation time to finish (2s) then fade out
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-    }, 2200);
-});
+let introCountdown = 4;
+let countTimer;
+
+function dismissIntro() {
+    clearInterval(countTimer);
+    introScreen.classList.add('hidden');
+    document.body.style.overflow = '';
+    // Trigger page reveals after intro
+    triggerReveal();
+}
+
+// Block scroll during intro
+document.body.style.overflow = 'hidden';
+
+// Start the 4-second auto countdown (starts after phase-3 appears at 6s)
+setTimeout(() => {
+    countTimer = setInterval(() => {
+        introCountdown--;
+        if (countEl) countEl.textContent = introCountdown;
+        if (introCountdown <= 0) dismissIntro();
+    }, 1000);
+}, 6200); // starts counting at ~6.2s (after "Enter Portfolio" button appears)
+
+if (enterBtn) {
+    enterBtn.addEventListener('click', dismissIntro);
+}
+
+// Safety fallback — always dismiss after 11s no matter what
+setTimeout(dismissIntro, 11000);
 
 /* ============================================================
-   2. PDF MODAL — view only, no download
+   2. PDF MODAL
+   Uses direct <object> embed — works on all hosting platforms
+   including GitHub Pages. No Google Docs needed.
+   The PDF path below assumes your file is at:
+   assets/Engineering_Portfolio.pdf
 ============================================================ */
-const pdfModal    = document.getElementById('pdf-modal');
-const pdfFrame    = document.getElementById('pdf-frame');
-const pdfClose    = document.getElementById('pdf-close');
-const openBtn1    = document.getElementById('open-pdf-btn');
-const openBtn2    = document.getElementById('open-pdf-btn-2');
+const pdfModal   = document.getElementById('pdf-modal');
+const pdfFrame   = document.getElementById('pdf-frame');
+const pdfLoading = document.getElementById('pdf-loading');
+const pdfClose   = document.getElementById('pdf-close');
+const openBtn1   = document.getElementById('open-pdf-btn');
+const openBtn2   = document.getElementById('open-pdf-btn-2');
 
-// PDF source — Google Docs viewer strips download button
-const PDF_SRC = 'https://docs.google.com/viewer?url=https://denniskamau.me/assets/Engineering_Portfolio.pdf&embedded=true';
+// Direct path to your PDF — adjust if different
+const PDF_PATH = 'assets/Engineering_Portfolio.pdf';
 
 function openPDF() {
-    // Load the frame only when opened (saves bandwidth)
-    if (!pdfFrame.src || pdfFrame.src === 'about:blank' || pdfFrame.src === '') {
-        pdfFrame.src = PDF_SRC;
-    }
     pdfModal.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    // Only load the iframe the first time
+    if (!pdfFrame.src || pdfFrame.src === window.location.href) {
+        pdfLoading.style.display  = 'flex';
+        pdfFrame.style.display    = 'none';
+
+        // Embed PDF with #toolbar=0 which hides the Chrome/Firefox download toolbar
+        pdfFrame.src = PDF_PATH + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
+
+        pdfFrame.onload = () => {
+            pdfLoading.style.display = 'none';
+            pdfFrame.style.display   = 'block';
+        };
+
+        // Fallback if iframe fails to fire onload (some browsers)
+        setTimeout(() => {
+            pdfLoading.style.display = 'none';
+            pdfFrame.style.display   = 'block';
+        }, 3500);
+    }
 }
 
 function closePDF() {
@@ -57,7 +102,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ============================================================
-   3. DESKTOP NAV — shadow on scroll
+   3. DESKTOP NAV SHADOW
 ============================================================ */
 const mainNav = document.getElementById('main-nav');
 if (mainNav) {
@@ -74,69 +119,60 @@ const revealEls = document.querySelectorAll('.reveal');
 const revealObs = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-            // Stagger each element slightly
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, i * 90);
+            setTimeout(() => entry.target.classList.add('visible'), i * 90);
             revealObs.unobserve(entry.target);
         }
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -30px 0px'
-});
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
+function triggerReveal() {
+    revealEls.forEach(el => revealObs.observe(el));
+}
+// Also attach observer right away (for fast skips)
 revealEls.forEach(el => revealObs.observe(el));
 
 /* ============================================================
-   5. COUNT-UP ANIMATION
+   5. COUNT-UP ANIMATION (FIXED — works on page load)
 ============================================================ */
 const counters = document.querySelectorAll('[data-count]');
 
 const countObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-
         const el     = entry.target;
         const target = parseInt(el.dataset.count, 10);
-        let current  = 0;
-        const step   = target / 50;
+        let   cur    = 0;
+        const step   = Math.max(target / 50, 0.1);
 
         const tick = setInterval(() => {
-            current = Math.min(current + step, target);
-            el.textContent = Math.ceil(current) + '+';
-            if (current >= target) clearInterval(tick);
+            cur = Math.min(cur + step, target);
+            el.textContent = Math.ceil(cur) + '+';
+            if (cur >= target) clearInterval(tick);
         }, 28);
 
         countObs.unobserve(el);
     });
-}, { threshold: 0.6 });
+}, { threshold: 0.5 });
 
 counters.forEach(c => countObs.observe(c));
 
 /* ============================================================
-   6. MOBILE BOTTOM NAV
-   — active highlight synced with scroll position
-   — tap triggers smooth scroll with offset
+   6. MOBILE BOTTOM NAV — active state + smooth scroll
 ============================================================ */
 const sections = document.querySelectorAll('section[id]');
 const mobLinks = document.querySelectorAll('.mob-link');
 
 function syncActiveNav() {
     let current = sections[0]?.id || '';
-    const OFFSET = 90;
     sections.forEach(sec => {
-        if (sec.getBoundingClientRect().top <= OFFSET) {
-            current = sec.id;
-        }
+        if (sec.getBoundingClientRect().top <= 90) current = sec.id;
     });
     mobLinks.forEach(link => {
         link.classList.toggle('active', link.dataset.section === current);
     });
 }
-
 window.addEventListener('scroll', syncActiveNav, { passive: true });
-syncActiveNav(); // run immediately on load
+syncActiveNav();
 
 mobLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -144,12 +180,8 @@ mobLinks.forEach(link => {
         const id     = this.getAttribute('href').replace('#', '');
         const target = document.getElementById(id);
         if (!target) return;
-
-        // Immediately show active state on tap
         mobLinks.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
-
-        // Scroll with top bar offset
         const topBar = document.querySelector('.mobile-topbar');
         const offset = topBar ? topBar.offsetHeight + 6 : 0;
         const top    = target.getBoundingClientRect().top + window.scrollY - offset;
@@ -173,11 +205,9 @@ document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a => {
     });
 });
 
-// Logo click scrolls to top
 document.querySelectorAll('.nav-logo').forEach(logo => {
     logo.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href === '#home') {
+        if (this.getAttribute('href') === '#home') {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -185,7 +215,7 @@ document.querySelectorAll('.nav-logo').forEach(logo => {
 });
 
 /* ============================================================
-   8. CONTACT FORM — async submit via Formspree
+   8. CONTACT FORM — async Formspree submit
 ============================================================ */
 const form       = document.getElementById('contact-form');
 const submitBtn  = document.getElementById('submit-btn');
@@ -194,8 +224,6 @@ const successMsg = document.getElementById('form-success');
 if (form) {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
-        // Loading state
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
         submitBtn.classList.add('sending');
 
@@ -205,20 +233,17 @@ if (form) {
                 body:    new FormData(form),
                 headers: { 'Accept': 'application/json' }
             });
-
             if (res.ok) {
                 form.reset();
                 submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Sent!';
                 successMsg.classList.add('show');
-
-                // Reset after 5 seconds
                 setTimeout(() => {
                     submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
                     submitBtn.classList.remove('sending');
                     successMsg.classList.remove('show');
                 }, 5000);
             } else {
-                throw new Error('Server error');
+                throw new Error('fail');
             }
         } catch {
             submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Error — Try Again';
