@@ -42,8 +42,8 @@ setTimeout(dismissIntro, 11000);
 
 /* ============================================================
    2. PDF MODAL
-   Uses direct <object> embed — works on all hosting platforms
-   including GitHub Pages. No Google Docs needed.
+   Uses direct iframe embed with no-download toolbar disabled
+   Works on all hosting platforms including GitHub Pages
    The PDF path below assumes your file is at:
    assets/Engineering_Portfolio.pdf
 ============================================================ */
@@ -66,8 +66,12 @@ function openPDF() {
         pdfLoading.style.display  = 'flex';
         pdfFrame.style.display    = 'none';
 
-        // Embed PDF with #toolbar=0 which hides the Chrome/Firefox download toolbar
-        pdfFrame.src = PDF_PATH + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
+        // Embed PDF with toolbar disabled and specific viewing options
+        // #toolbar=0 hides download button
+        // #navpanes=0 hides sidebar
+        // #scrollbar=1 shows scrollbar
+        // #view=FitH fits page to window height
+        pdfFrame.src = PDF_PATH + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH&disablecopy=1';
 
         pdfFrame.onload = () => {
             pdfLoading.style.display = 'none';
